@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_layout_search_home"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_medium"
+        android:textColorHint="@color/brand"
+        app:boxCornerRadiusBottomEnd="@dimen/spacing_large"
+        app:boxCornerRadiusBottomStart="@dimen/spacing_large"
+        app:boxCornerRadiusTopEnd="@dimen/spacing_large"
+        app:boxCornerRadiusTopStart="@dimen/spacing_large"
+        app:boxStrokeColor="@color/brand"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_text_search_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/baseline_search_24"
+            android:hint="@string/search_country"
+            android:textColorHint="@color/black_38" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/text_input_layout_search_home"
+        android:layout_marginTop="@dimen/spacing_medium"
+        android:layout_marginHorizontal="@dimen/spacing_medium"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

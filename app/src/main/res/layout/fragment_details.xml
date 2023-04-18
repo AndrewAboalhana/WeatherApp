@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_layout_search_home"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_medium"
+            android:textColorHint="@color/brand"
+            app:boxCornerRadiusBottomEnd="@dimen/spacing_large"
+            app:boxCornerRadiusBottomStart="@dimen/spacing_large"
+            app:boxCornerRadiusTopEnd="@dimen/spacing_large"
+            app:boxCornerRadiusTopStart="@dimen/spacing_large"
+            app:boxStrokeColor="@color/brand"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_search_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/baseline_search_24"
+                android:hint="@string/search_country"
+                android:textColorHint="@color/black_38" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/text_view_country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_medium"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/black_87"
+            android:textSize="@dimen/font_size_title_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_input_layout_search_home"
+            tools:text="Egypt" />
+
+        <TextView
+            android:id="@+id/text_view_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_medium"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/black_87"
+            android:textSize="@dimen/font_size_title_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_country"
+            tools:text="Cairo" />
+
+        <TextView
+            android:id="@+id/text_view_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_medium"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/black_38"
+            android:textSize="@dimen/font_size_caption"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_city"
+            tools:text="Mon,Jun 30" />
+
+        <ImageView
+            android:id="@+id/image_view_weather"
+            android:layout_width="124dp"
+            android:layout_height="124dp"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:contentDescription="@string/weather_state"
+            android:src="@drawable/sun"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.358"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_view_date" />
+
+        <TextView
+            android:id="@+id/text_view_weather_degree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_normal"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/black_87"
+            android:textSize="@dimen/font_size_title_x_x_large"
+            app:layout_constraintBottom_toBottomOf="@id/image_view_weather"
+            app:layout_constraintStart_toEndOf="@id/image_view_weather"
+            app:layout_constraintTop_toTopOf="@id/image_view_weather"
+            tools:text="19"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/degree"
+            app:layout_constraintBottom_toBottomOf="@id/text_view_weather_degree"
+            app:layout_constraintStart_toEndOf="@id/text_view_weather_degree"
+            app:layout_constraintTop_toTopOf="@id/text_view_weather_degree"
+            app:layout_constraintVertical_bias="0.24000001" />
+
+        <TextView
+            android:id="@+id/text_view_weather_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/black_38"
+            android:textSize="@dimen/font_size_title"
+            app:layout_constraintStart_toStartOf="@id/text_view_weather_degree"
+            app:layout_constraintTop_toBottomOf="@id/text_view_weather_degree"
+            tools:text="sunrise" />
+
+        <include
+            layout="@layout/item_weather_states_card"
+            android:id="@+id/card_view_weather_states"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_medium"
+            android:layout_marginTop="@dimen/spacing_large"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_view_weather" />
+
+        <TextView
+            android:id="@+id/text_view_suggested_clothes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_medium"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/suggested_clothes"
+            android:textColor="@color/black_87"
+            android:textSize="@dimen/font_size_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_view_weather_states" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image_view_clothes"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginHorizontal="@dimen/spacing_medium"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:layout_marginBottom="@dimen/spacing_medium"
+            android:scaleType="fitXY"
+            android:src="@drawable/summer"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_view_suggested_clothes"
+            app:shapeAppearanceOverlay="@style/Rounded16dpImageView" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

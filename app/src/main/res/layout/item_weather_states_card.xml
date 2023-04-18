@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/spacing_medium"
+    android:layout_marginVertical="@dimen/spacing_small"
+    android:backgroundTint="@color/card_background_default"
+    app:cardCornerRadius="@dimen/spacing_medium">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:layout_marginBottom="@dimen/spacing_small"
+            android:src="@drawable/wind"
+            app:layout_constraintBottom_toTopOf="@id/text_view_wind_speed"
+            app:layout_constraintEnd_toEndOf="@id/text_view_wind_speed"
+            app:layout_constraintStart_toStartOf="@id/text_view_wind_speed"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_view_wind_speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_small"
+            android:textColor="@color/black_87"
+            android:textSize="@dimen/font_size_body"
+            app:layout_constraintBottom_toTopOf="@id/text_view_wind_status"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/text_view_uv_percent"
+            tools:text="10 m/s" />
+
+        <TextView
+            android:id="@+id/text_view_wind_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="@string/wind"
+            android:textColor="@color/black_38"
+            android:textSize="@dimen/font_size_caption"
+            app:layout_constraintBaseline_toBaselineOf="@+id/text_view_uv"
+            app:layout_constraintEnd_toEndOf="@+id/text_view_wind_speed"
+            app:layout_constraintStart_toStartOf="@+id/text_view_wind_speed" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:layout_marginBottom="@dimen/spacing_small"
+            android:src="@drawable/humidity"
+            app:layout_constraintBottom_toTopOf="@id/text_view_humidity_percent"
+            app:layout_constraintEnd_toEndOf="@id/text_view_humidity_percent"
+            app:layout_constraintStart_toStartOf="@id/text_view_humidity_percent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_view_humidity_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_small"
+            android:textColor="@color/black_87"
+            android:textSize="@dimen/font_size_body"
+            app:layout_constraintBottom_toTopOf="@id/text_view_humidity_status"
+            app:layout_constraintEnd_toStartOf="@id/text_view_rain_percent"
+            app:layout_constraintStart_toEndOf="@+id/text_view_feels_like_degree"
+            tools:text="10 m/s" />
+
+
+        <TextView
+            android:id="@+id/text_view_humidity_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="@string/humidity"
+            android:textColor="@color/black_38"
+            android:textSize="@dimen/font_size_caption"
+            app:layout_constraintBaseline_toBaselineOf="@+id/text_view_rain_status"
+            app:layout_constraintEnd_toEndOf="@+id/text_view_humidity_percent"
+            app:layout_constraintStart_toStartOf="@+id/text_view_humidity_percent" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:layout_marginBottom="@dimen/spacing_small"
+            android:src="@drawable/weather_clouds_icon"
+            app:layout_constraintBottom_toTopOf="@id/text_view_rain_percent"
+            app:layout_constraintEnd_toEndOf="@id/text_view_rain_percent"
+            app:layout_constraintStart_toStartOf="@id/text_view_rain_percent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_view_rain_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_small"
+            android:textColor="@color/black_87"
+            android:textSize="@dimen/font_size_body"
+            app:layout_constraintBottom_toTopOf="@id/text_view_rain_status"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/text_view_humidity_percent"
+            tools:text="10 m/s" />
+
+
+        <TextView
+            android:id="@+id/text_view_rain_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_large"
+            android:fontFamily="@font/roboto"
+            android:text="@string/rain"
+            android:textColor="@color/black_38"
+            android:textSize="@dimen/font_size_caption"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/text_view_rain_percent"
+            app:layout_constraintStart_toStartOf="@+id/text_view_rain_percent" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:layout_marginBottom="@dimen/spacing_small"
+            android:src="@drawable/uv"
+            app:layout_constraintBottom_toTopOf="@id/text_view_uv_percent"
+            app:layout_constraintEnd_toEndOf="@id/text_view_uv_percent"
+            app:layout_constraintStart_toStartOf="@id/text_view_uv_percent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_view_uv_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_small"
+            android:textColor="@color/black_87"
+            android:textSize="@dimen/font_size_body"
+            app:layout_constraintBottom_toTopOf="@id/text_view_uv"
+            app:layout_constraintEnd_toStartOf="@id/text_view_feels_like_degree"
+            app:layout_constraintStart_toEndOf="@+id/text_view_wind_speed"
+            tools:text="1.0" />
+
+        <TextView
+            android:id="@+id/text_view_uv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="@string/uv"
+            android:textColor="@color/black_38"
+            android:textSize="@dimen/font_size_caption"
+            app:layout_constraintBaseline_toBaselineOf="@+id/text_view_wind_feels_like"
+            app:layout_constraintEnd_toEndOf="@+id/text_view_uv_percent"
+            app:layout_constraintStart_toStartOf="@+id/text_view_uv_percent" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:layout_marginBottom="@dimen/spacing_small"
+            android:src="@drawable/thermometer"
+            app:layout_constraintBottom_toTopOf="@id/text_view_feels_like_degree"
+            app:layout_constraintEnd_toEndOf="@id/text_view_feels_like_degree"
+            app:layout_constraintStart_toStartOf="@id/text_view_feels_like_degree"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_view_feels_like_degree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_small"
+            android:textColor="@color/black_87"
+            android:textSize="@dimen/font_size_body"
+            app:layout_constraintBottom_toTopOf="@id/text_view_wind_feels_like"
+            app:layout_constraintEnd_toStartOf="@id/text_view_humidity_percent"
+            app:layout_constraintStart_toEndOf="@+id/text_view_uv_percent"
+            tools:text="10 m/s" />
+
+        <TextView
+            android:id="@+id/text_view_wind_feels_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="@string/feels_like"
+            android:textColor="@color/black_38"
+            android:textSize="@dimen/font_size_caption"
+            app:layout_constraintBaseline_toBaselineOf="@+id/text_view_humidity_status"
+            app:layout_constraintEnd_toEndOf="@+id/text_view_feels_like_degree"
+            app:layout_constraintStart_toStartOf="@+id/text_view_feels_like_degree" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
