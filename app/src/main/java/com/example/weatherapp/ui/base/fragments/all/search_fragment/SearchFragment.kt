@@ -77,7 +77,7 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(),ISearchView,SearchL
     }
 
 
-    override fun onTeamTasksSuccess(searchData: List<WeatherData>) {
+    override fun onSearchSuccess(searchData: List<WeatherData>) {
         displayTeamTasks(searchData)
     }
 

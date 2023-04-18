@@ -8,5 +8,5 @@ interface ISearchView {
     fun onSearchSuccess()
     fun onSearchFailure(error: String)
     fun showCityNotFoundError()
-    fun onTeamTasksSuccess(searchData: List<WeatherData>)
+    fun onSearchSuccess(searchData: List<WeatherData>)
 }

@@ -20,4 +20,10 @@
 
 <dimen name="radius_normal">16dp</dimen>
 <dimen name="radius_medium">28dp</dimen>
+    <dimen name="colthes_height">300dp</dimen>
+    <dimen name="wheather_image_width">124dp</dimen>
+    <dimen name="image_wheather_height">124dp</dimen>
+    <dimen name="search_width">32dp</dimen>
+    <dimen name="search_height">32dp</dimen>
+    <dimen name="item_search_height">104dp</dimen>
 </resources>

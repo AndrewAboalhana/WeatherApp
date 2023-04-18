@@ -8,6 +8,5 @@ interface IStartView {
     fun hideLoading()
     fun onStartSuccess()
     fun onStartFailure(error: String)
-    fun showCityNotFoundError()
     fun navigateToDetailsFragment(data: WeatherData)
 }

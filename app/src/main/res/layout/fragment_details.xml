@@ -10,9 +10,10 @@
         android:layout_height="wrap_content">
 
         <ImageView
+            android:contentDescription="@string/search_country"
             android:id="@+id/image_view_search"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="@dimen/search_width"
+            android:layout_height="@dimen/search_height"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="@dimen/spacing_medium"
@@ -23,6 +24,8 @@
             android:id="@+id/text_view_country"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:maxLength="20"
+            android:lines="1"
             android:layout_marginStart="@dimen/spacing_medium"
             android:layout_marginTop="@dimen/spacing_large"
             android:fontFamily="@font/roboto_medium"
@@ -60,8 +63,8 @@
 
         <ImageView
             android:id="@+id/image_view_weather"
-            android:layout_width="124dp"
-            android:layout_height="124dp"
+            android:layout_width="@dimen/wheather_image_width"
+            android:layout_height="@dimen/image_wheather_height"
             android:layout_marginTop="@dimen/spacing_large"
             android:contentDescription="@string/weather_state"
             android:src="@drawable/sun"
@@ -85,6 +88,7 @@
             />
 
         <ImageView
+            android:contentDescription="@string/degree"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/degree"
@@ -133,7 +137,7 @@
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/image_view_clothes"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="@dimen/colthes_height"
             android:layout_marginHorizontal="@dimen/spacing_medium"
             android:layout_marginTop="@dimen/spacing_medium"
             android:layout_marginBottom="@dimen/spacing_medium"

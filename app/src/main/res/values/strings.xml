@@ -8,10 +8,13 @@
     <string name="sun">sun</string>
     <string name="suggested_clothes">Suggested Clothes</string>
     <string name="weather_state">weather_state</string>
-    <string name="feels_like">Feels like</string>
+    <string name="feels_like">Feels</string>
     <string name="humidity">Humidity</string>
     <string name="rain">Rain</string>
     <string name="uv">UV</string>
     <string name="wind">Wind</string>
+    <string name="degree">degree</string>
+    <string name="search_card">search_card</string>
+
 
 </resources>

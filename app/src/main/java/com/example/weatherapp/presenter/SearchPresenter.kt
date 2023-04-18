@@ -28,7 +28,7 @@ class SearchPresenter(
                     val data = Gson().fromJson(jsonString, WeatherData::class.java)
                     val weatherData = listOf(data)
                     if (response.code == 400){ view.showCityNotFoundError() }
-                    view.onTeamTasksSuccess(weatherData)
+                    view.onSearchSuccess(weatherData)
                     view.onSearchSuccess()
                 }
                 view.hideLoading()
