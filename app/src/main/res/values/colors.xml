@@ -18,4 +18,5 @@
     <color name="black_87">#DE000000</color>
     <color name="black_38">#61000000</color>
     <color name="background">#F7F7F7</color>
+    <color name="button_start_color">#1AFFF9F9</color>
 </resources>
