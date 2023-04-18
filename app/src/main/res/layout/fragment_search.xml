@@ -17,6 +17,9 @@
         app:boxCornerRadiusTopStart="@dimen/spacing_large"
         app:boxStrokeColor="@color/brand"
         app:layout_constraintEnd_toEndOf="parent"
+        app:endIconMode="custom"
+        app:endIconTint="@color/brand"
+        app:endIconDrawable="@drawable/baseline_search_24"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -24,7 +27,6 @@
             android:id="@+id/edit_text_search_home"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableEnd="@drawable/baseline_search_24"
             android:hint="@string/search_country"
             android:textColorHint="@color/black_38" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -35,6 +37,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/text_input_layout_search_home"
         android:layout_marginTop="@dimen/spacing_medium"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:layout_marginHorizontal="@dimen/spacing_medium"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

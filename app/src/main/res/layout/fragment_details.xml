@@ -9,30 +9,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/text_input_layout_search_home"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/spacing_medium"
-            android:textColorHint="@color/brand"
-            app:boxCornerRadiusBottomEnd="@dimen/spacing_large"
-            app:boxCornerRadiusBottomStart="@dimen/spacing_large"
-            app:boxCornerRadiusTopEnd="@dimen/spacing_large"
-            app:boxCornerRadiusTopStart="@dimen/spacing_large"
-            app:boxStrokeColor="@color/brand"
+        <ImageView
+            android:id="@+id/image_view_search"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edit_text_search_home"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawableEnd="@drawable/baseline_search_24"
-                android:hint="@string/search_country"
-                android:textColorHint="@color/black_38" />
-        </com.google.android.material.textfield.TextInputLayout>
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:layout_marginEnd="@dimen/spacing_medium"
+            android:src="@drawable/baseline_search_24"/>
 
         <TextView
             android:id="@+id/text_view_country"
@@ -44,7 +29,7 @@
             android:textColor="@color/black_87"
             android:textSize="@dimen/font_size_title_medium"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_input_layout_search_home"
+            app:layout_constraintTop_toBottomOf="@+id/image_view_search"
             tools:text="Egypt" />
 
         <TextView
@@ -113,6 +98,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto"
+            android:maxLength="10"
+            android:lines="1"
             android:textColor="@color/black_38"
             android:textSize="@dimen/font_size_title"
             app:layout_constraintStart_toStartOf="@id/text_view_weather_degree"
@@ -158,6 +145,4 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 </ScrollView>

@@ -22,17 +22,18 @@ class SearchPresenter(
                 view.onSearchFailure(e.toString())
                 view.hideLoading()
             }
+
             override fun onResponse(call: Call, response: Response) {
                 response.body?.string()?.let { jsonString ->
                     val data = Gson().fromJson(jsonString, WeatherData::class.java)
                     val weatherData = listOf(data)
+                    if (response.code == 400){ view.showCityNotFoundError() }
                     view.onTeamTasksSuccess(weatherData)
                     view.onSearchSuccess()
                 }
                 view.hideLoading()
             }
         })
-
     }
 
 }

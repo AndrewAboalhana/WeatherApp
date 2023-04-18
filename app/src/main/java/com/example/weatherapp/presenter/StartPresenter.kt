@@ -26,6 +26,7 @@ class StartPresenter(
             override fun onResponse(call: Call, response: Response) {
                 response.body?.string()?.let { jsonString ->
                     val data = Gson().fromJson(jsonString, WeatherData::class.java)
+                    if (response.code == 400){ view.showCityNotFoundError() }
                     onWeatherDataReceived(data)
                     view.onStartSuccess()
                 }
